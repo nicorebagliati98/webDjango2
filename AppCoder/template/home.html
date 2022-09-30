@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/myestilo.css'%}">
+    <title>APPCODER</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:8000/AppCoder/">HOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="http://127.0.0.1:8000/AppCoder/cursos/">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/AppCoder/read_estudiantes/">Estudiantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/AppCoder/profesores/">Profesores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/AppCoder/entregables/">Entregables</a>
+              </li>
+              <li class="nav-item" style="position: absolute; right: 200px">
+                <img src="{{avatar}}" width="40px">
+              </li>
+              <li class="nav-item" style="position: absolute; right: 120px">
+                <a class="nav-link active" aria-current="page" href="/AppCoder/perfil/">{{ user.username }}</a>
+              </li>
+              <li class="nav-item" style="position: absolute; right: 0px">
+                <a class="nav-link" href="http://127.0.0.1:8000/AppCoder/logout/">Salir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/AppCoder/login/">INICIA SESION</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/AppCoder/registro/">REGISTRATE</a>
+              </li>
+            
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="contenido1">
+        {% block contenido %}
+            <p> Cargando... </p>
+        {% endblock %}
+      </div>
+</body>
+</html>

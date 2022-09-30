@@ -1,0 +1,51 @@
+.contenido1{
+    position: relative;
+    background-color: rgb(75, 62, 214);
+    top: 60px;
+}
+.contenidoEstudiante{
+    background-color: rgb(75, 62, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.formDataEstudiante{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 10px;
+    background-color: rgb(107, 95, 135);
+    border-radius: 8px;
+    padding: 20px;
+}
+/*.formDataEstudiantes input{
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+}*/
+/*soy un comentario*/
+/*
+.contenido1{
+    position: relative;
+    top: 60px;
+    border: 1px solid red;
+}
+
+.contenidoEstudiantes{
+    background-color: #030354;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.formDataEstudiantes{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+*/

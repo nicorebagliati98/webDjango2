@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+<link rel="stylesheet" href="{%static 'css/myestilo.css'%}">
+
+
+<h1>Cambiar contraseña</h1>
+<h1>{{ usuario }}</h1>
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" class="btn btn-primary btndj" value="Cambiar Contraseña">
+</form>

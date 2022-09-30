@@ -1,3 +1,5 @@
+from urllib import request
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from AppCoder.models import Curso
@@ -14,9 +16,19 @@ def homePage(self):
     return HttpResponse(documento)
 
 def cursos(self):
+
+    cursos = Curso(nombre="UX", camada="54321")
+    cursos.save()
+    documento = f'Curso: {cursos.nombre} camada: {cursos.camada}'
+
     #planilla= loader.get_template("cursos.html")
-    curso = Curso(nombre="UX/UI", camada="12345")
-    curso.save()
-    #documento= planilla.render()
-    documento = f'Curso: {curso.nombre} camada: {curso.camada}' 
+    #cursos = Curso.objects.all()
+    #data = {"cursos":cursos}
+    #documento= planilla.render(data)
     return HttpResponse(documento)
+
+    #cursos = Curso.objects.all()
+    #return HttpResponse(cursos)
+
+def redirectAppCoder(request):
+    return redirect('AppCoder/')

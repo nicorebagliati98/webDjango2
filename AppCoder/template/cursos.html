@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Este es el nombre que figura arriba en la pestaña-->
-    <title>Django  |  Home</title>
+    <title>Cursos</title>
 </head>
 <body>
-    Soy la homePage :D
+    Seccion cursos
     <br>
-    Hola {{nombre}} {{apellido}}
-
-    {%for n in lista%}
-        {{n}}
+    {%for curso in cursos%}
+        {{curso}}
         <br>
     {%endfor%}
 </body>
